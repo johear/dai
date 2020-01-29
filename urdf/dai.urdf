@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name = "DAI">
+	<!-- links section -->>
+
+	<material name = "Grey 7 Transparent 8">
+		<color rgba = "0.7 0.7 0.7 0.8" />
+	</material>
+
+
+	<material name = "Red">
+		<color rgba = "1.0 0.0 0.0 1" />
+	</material>
+
+	<material name = "Green">
+		<color rgba = "0.0 1.0 0.0 1" />
+	</material>
+
+	<material name = "Blue">
+		<color rgba = "0.0 0.0 1.0 1" />
+	</material>
+
+
+	<material name = "Cyan">
+		<color rgba = "0.0 1.0 1.0 1" />
+	</material>
+
+	<material name = "Magenta">
+		<color rgba = "1.0 0.0 1.0 1" />
+	</material>
+
+	<material name = "Yellow">
+		<color rgba = "1.0 1.0 0.0 1" />
+	</material>
+
+
+	<material name = "Pink">
+		<color rgba = "1.0 0.0 0.5 1" />
+	</material>
+
+	<material name = "Orange">
+		<color rgba = "1.0 0.5 0.0 1" />
+	</material>
+
+
+	<material name = "Chartreuse">
+		<color rgba = "0.5 1.0 0.0 1" />
+	</material>
+
+	<material name = "SpringGreen">
+		<color rgba = "0.0 1.0 0.5 1" />
+	</material>
+
+
+	<material name = "Azure">
+		<color rgba = "0.0 0.5 1.0 1" />
+	</material>
+
+	<material name = "Violet">
+		<color rgba = "0.5 0.0 1.0 1" />
+	</material>
+
+
+	
+	<link name = "Body">
+		<inertial>
+			<origin xyz = "0 0 0" />
+			<mass value = "37" />
+			<inertia ixx = "0.75" iyy = "0.75" izz = "0.75" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 0 0" />
+			<geometry>
+				<box size = "0.35 0.35 0.35" />
+			</geometry>
+			<material name = "Grey 7 Transparent 8" />				
+		</visual>
+		<collision>
+     			<geometry>
+        			<box size= "0.35 0.35 0.35" />
+      			</geometry>
+      			<origin xyz="0 0 0" rpy="0 0 0" />
+    		</collision>
+	</link>
+
+
+	<link name = "Slider1">
+		<inertial>
+			<origin xyz = "0 0 0" />
+			<mass value = "1.5" />
+			<inertia ixx = "0.28" iyy = "0" izz = "0.28" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 0 0" />
+			<geometry>
+				<box size = "1.858 0.025 0.025" />
+			</geometry>
+			<material name = "Red"/>		
+		</visual>
+		<collision>
+     			<geometry>
+        			<box size= "1.858 0.025 0.025" />
+      			</geometry>
+      			<origin xyz="0 0 0" rpy="0 0 0" />
+    		</collision>
+	</link>
+
+	<link name = "Slider2">
+		<inertial>
+			<origin xyz = "0 0 0" />
+			<mass value = "1.5" />
+			<inertia ixx = "0.28" iyy = "0" izz = "0.28" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 0 0" />
+			<geometry>
+				<box size = "0.025 1.858 0.025" />
+			</geometry>
+			<material name = "Green" />			
+		</visual>
+		<collision>
+     			<geometry>
+        			<box size= "0.025 1.858 0.025" />
+      			</geometry>
+      			<origin xyz="0 0 0" rpy="0 0 0" />
+    		</collision>
+	</link>
+
+	<link name = "Slider3">
+		<inertial>
+			<origin xyz = "0 0 0" />
+			<mass value = "1.5" />
+			<inertia ixx = "0.28" iyy = "0" izz = "0.28" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 0 0" />
+			<geometry>
+				<box size = "0.025 0.025 1.858" />
+			</geometry>			
+			<material name = "Blue" />			
+		</visual>
+		<collision>
+     			<geometry>
+        			<box size= "0.025 0.025 1.858" />
+      			</geometry>
+      			<origin xyz="0 0 0" rpy="0 0 0" />
+    		</collision>
+	</link>
+
+
+	<link name = "Wheel1a">
+		<inertial>
+			<origin xyz = "0.929 0 0" rpy="0 1.5707963268 0"/>
+			<mass value = "0.315" />
+			<inertia ixx = "0.004" iyy = "0.004" izz = "0.001" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0.929 0 0" rpy="0 1.57079632687 0"/>
+			<geometry>
+				<cylinder radius = "0.0625"  length = "0.042" />
+			</geometry>			
+			<material name = "Orange" /> #Orange		
+		</visual>
+		<collision>
+     			<geometry>
+        			<cylinder radius = "0.0625"  length = "0.042" />
+      			</geometry>
+      			<origin xyz="0.929 0 0" rpy="0 1.5707963268 0" />
+    		</collision>
+	</link>
+
+	<link name = "Wheel1b">
+		<inertial>
+			<origin xyz = "-0.929 0 0" rpy="0 4.7123889804 0"/>
+			<mass value = "0.315" />
+			<inertia ixx = "0.004" iyy = "0.004" izz = "0.001" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "-0.929 0 0" rpy="0 4.7123889804 0"/>
+			<geometry>
+				<cylinder radius = "0.0625"  length = "0.042" />
+			</geometry>		
+			<material name = "Azure" /> #Pink		
+		</visual>
+		<collision>
+     			<geometry>
+        			<cylinder radius = "0.0625"  length = "0.042" />
+      			</geometry>
+      			<origin xyz="-0.929 0 0" rpy="0 4.7123889804 0" />
+    		</collision>
+	</link>
+
+	<link name = "Wheel2a">
+		<inertial>
+			<origin xyz = "0 0.929 0" rpy="4.7123889804 0 0"/>
+			<mass value = "0.315" />
+			<inertia ixx = "0.004" iyy = "0.004" izz = "0.001" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 0.929 0" rpy="4.7123889804 0 0"/>
+			<geometry>
+				<cylinder radius = "0.0625"  length = "0.042" />
+			</geometry>		
+			<material name = "Orange" /> #Chartreuse
+		</visual>
+		<collision>
+     			<geometry>
+        			<cylinder radius = "0.0625"  length = "0.042" />
+      			</geometry>
+      			<origin xyz="0 0.929 0" rpy="4.7123889804 0 0" />
+    		</collision>
+	</link>
+
+	<link name = "Wheel2b">
+		<inertial>
+			<origin xyz = "0 -0.929 0" rpy="1.57079632687 0 0"/>
+			<mass value = "0.315" />
+			<inertia ixx = "0.004" iyy = "0.004" izz = "0.001" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 -0.929 0" rpy="1.57079632687 0 0"/>
+			<geometry>
+				<cylinder radius = "0.0625"  length = "0.042" />
+			</geometry>		
+			<material name = "Azure" /> #SpringGreen
+		</visual>
+		<collision>
+     			<geometry>
+        			<cylinder radius = "0.0625"  length = "0.042" />
+      			</geometry>
+      			<origin xyz="0 -0.929 0" rpy="1.57079632687 0 0" />
+    		</collision>
+	</link>
+
+	<link name = "Wheel3a">
+		<inertial>
+			<origin xyz = "0 0 0.929" rpy="0 0 0"/>
+			<mass value = "0.315" />
+			<inertia ixx = "0.004" iyy = "0.004" izz = "0.001" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 0 0.929" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius = "0.0625"  length = "0.042" />
+			</geometry>			
+			<material name = "Orange" /> #Azure	
+		</visual>
+		<collision>
+     			<geometry>
+        			<cylinder radius = "0.0625"  length = "0.042" />
+      			</geometry>
+      			<origin xyz="0 0 0.929" rpy="0 0 0" />
+    		</collision>
+	</link>
+	
+	<link name = "Wheel3b">
+		<inertial>
+			<origin xyz = "0 0 -0.929" rpy="3.1415926536 0 0"/>
+			<mass value = "0.315" />
+			<inertia ixx = "0.004" iyy = "0.004" izz = "0.001" ixy = "0" ixz = "0" iyz = "0" />
+		</inertial>
+		<visual>
+			<origin xyz = "0 0 -0.929" rpy="3.1415926536 0 0"/>
+			<geometry>
+				<cylinder radius = "0.0625"  length = "0.042" />
+			</geometry>			
+			<material name = "Azure" /> #Violet		
+		</visual>
+		<collision>
+     			<geometry>
+        			<cylinder radius = "0.0625"  length = "0.042" />
+      			</geometry>
+      			<origin xyz="0 0 -0.929" rpy="3.1415926536 0 0" />
+    		</collision>
+	</link>
+	
+	
+
+	<!-- joints section -->>
+
+<!--  <limit> lower and upper (m) behave as expected, effort (Nm) and velocity (m/s) don't seem to have any effect in pybullet -->
+<!--  <dynamics> damping and friction don't seem to have any effect in pybullet -->
+
+	<joint name = "SliderMotor1" type = "prismatic">
+		<parent link = "Body" />
+		<child link = "Slider1" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "1 0 0" />
+		<limit effort="575" lower="-0.3" upper="0.3" velocity="0.55"/> 
+	</joint>
+
+	<joint name = "SliderMotor2" type = "prismatic">
+		<parent link = "Body" />
+		<child link = "Slider2" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "0 1 0" />
+		<limit effort="575" lower="-0.3" upper="0.3" velocity="0.55"/> 
+	</joint>
+
+	<joint name = "SliderMotor3" type = "prismatic">
+		<parent link = "Body" />
+		<child link = "Slider3" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "0 0 1" />
+		<limit effort="575" lower="-0.3" upper="0.3" velocity="0.55"/> 
+	</joint>
+
+
+	<joint name = "WheelMotor1a" type = "continuous">
+		<parent link = "Slider1" />
+		<child link = "Wheel1a" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "1 0 0" />
+		<dynamics damping ="0" friction="0" /> #needs a bit of looking into
+	</joint>
+
+	<joint name = "WheelMotor1b" type = "continuous">
+		<parent link = "Slider1" />
+		<child link = "Wheel1b" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "-1 0 0" />
+		<dynamics damping ="0" friction="0" />
+	</joint>
+	
+	<joint name = "WheelMotor2a" type = "continuous">
+		<parent link = "Slider2" />
+		<child link = "Wheel2a" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "0 1 0" />
+		<dynamics damping ="0" friction="0" />
+	</joint>
+
+	<joint name = "WheelMotor2b" type = "continuous">
+		<parent link = "Slider2" />
+		<child link = "Wheel2b" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "0 -1 0" />
+		<dynamics damping ="0" friction="0" />
+	</joint>
+
+	<joint name = "WheelMotor3a" type = "continuous">
+		<parent link = "Slider3" />
+		<child link = "Wheel3a" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "0 0 1" />
+		<dynamics damping ="0" friction="0" />
+	</joint>
+
+	<joint name = "WheelMotor3b" type = "continuous">
+		<parent link = "Slider3" />
+		<child link = "Wheel3b" />
+		<origin xyz = "0 0 0" />
+		<axis xyz = "0 0 -1" />
+		<dynamics damping ="0" friction="0" />
+	</joint>
+
+</robot>
