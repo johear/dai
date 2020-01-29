@@ -4,6 +4,7 @@ Trying to keep it as close to the jetson tx2 version, so using tensorflow-gpu 1.
 Requirements:
 
 Try the Dai-Simulation.yml file:
+
 conda env create -f Dai-Simulation.yml
 
 OR
