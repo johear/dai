@@ -6,9 +6,7 @@ conda create --prefix ~/Dai-Simulation/conda-env python=3.7
 
 conda install pip
 
-conda install numpy (installed numpy 1.18.1)
-
-conda install keras-gpu (installed keras-gpu 2.2.4-0, tensorflow-gpu 1.14.0, H5py, etc.) 
+conda install keras-gpu (installed keras-gpu 2.2.4-0, tensorflow-gpu 1.14.0, H5py, numpy, etc.) 
 
 conda install paramiko (installed paramiko 2.4.2)
 
