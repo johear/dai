@@ -1,7 +1,7 @@
 Trying to keep it as close to the jetson tx2 version, so using tensorflow-gpu 1.14
 
 Requirements:
-conda create --prefix ~/Dai-Simulation/conda-env python==3.7
+conda create --prefix ~/Dai-Simulation/conda-env python=3.7
 --> to remove (conda remove --prefix ~/Dai-Simulation/conda-env --all)
 
 conda install pip
