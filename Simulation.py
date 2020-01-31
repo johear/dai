@@ -67,7 +67,7 @@ class Simulation:
 
 
     def connect(self):
-        self.physicsClient = p.connect(p.GUI)# p.DIRECT for non-GUI // p.GUI for GUI
+        self.physicsClient = p.connect(p.DIRECT)# p.DIRECT for non-GUI // p.GUI for GUI
         p.resetSimulation()
         #p.setTimeStep(0.1)
         p.setRealTimeSimulation(1) #0 is off
